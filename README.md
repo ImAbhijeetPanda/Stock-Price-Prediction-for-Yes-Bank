@@ -99,6 +99,38 @@ Using the ARIMAX model, the stock price for the next 3 months was forecasted:
 | July 2020   | 19.99                        |
 
 ---
+## 🔮 Future Predictions
+
+Using the ARIMAX model, the stock price for the next 3 months was forecasted:
+
+| Month       | Predicted Closing Price (₹) |
+|:------------|:----------------------------|
+| May 2020    | 22.04                       |
+| June 2020   | 20.19                       |
+| July 2020   | 19.99                       |
+
+---
+
+## 🚀 Deployment
+
+The ARIMAX model has been made deployable to forecast **future closing prices**.
+
+### ✅ Features:
+- Accepts a specified number of months to forecast (`n_steps`).
+- Simulates future exogenous features using the last known values with slight noise.
+- Returns predicted closing prices along with future dates.
+- Optional visualization is included.
+
+### 🛠 Requirements:
+- `arimax_model.pkl`: The trained ARIMAX model saved to disk.
+- `processed_data.csv`: Dataset with engineered features (`MA_2`, `MA_3`, `Momentum_1`).
+
+### 🧩 Usage:
+Call the forecast function in your deployment environment:
+```python
+forecast_future_close_prices(n_steps=4)
+```
+---
 
 ## 🚀 Key Learnings
 - **ARIMAX** models with external features outperform pure ML and ARIMA models for financial time series with external shocks.
